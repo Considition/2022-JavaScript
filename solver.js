@@ -17,7 +17,7 @@ function solve(map, bagType, days) {
     solution.recycleRefundChoice = true
     solution.bagPrice = 10
     solution.refundAmount = 1
-    solution.bagType = 1
+    solution.bagType = bagType
     
     solution.orders = []
     for (let day = 0; day < days; day++) {
@@ -30,17 +30,17 @@ function solve(map, bagType, days) {
 
 // Solution 1: "Spend all money day 1"
 function wasteMoney(bagtype, companyBudget) {
-    return Math.floor(companyBudget / bagType_price[bagtype]);
+    return Math.floor(companyBudget / bagType_price[bagtype-1]);
 }
 
 // Solution 2: "Spend equally money every day"
 function splitMoney(bagtype, companyBudget, days) {
-    return Math.floor(companyBudget / bagType_price[bagtype] / days);
+    return Math.floor(companyBudget / bagType_price[bagtype-1] / days);
 }
 
 // Solution 3: "Everyone get one bag every day"
 function holdMoney(bagtype, companyBudget, population, days) {
-    return Math.floor(companyBudget / bagType_price[bagtype] / population / days);
+    return Math.floor(companyBudget / bagType_price[bagtype-1] / population / days);
 }
 
 module.exports = {
