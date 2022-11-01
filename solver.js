@@ -17,7 +17,7 @@ function solve(map, bagType, days) {
     solution.recycleRefundChoice = true
     solution.bagPrice = 10
     solution.refundAmount = 1
-    solution.bagType = 1
+    solution.bagType = bagType
     
     solution.orders = []
     for (let day = 0; day < days; day++) {
