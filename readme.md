@@ -1,4 +1,4 @@
-﻿# Javascript Starterkit Considition 2022
+﻿# JavaScript Starterkit Considition 2022
 This is the StarterKit for Considition 2022 which will help you get going as quickly as possible with the competition.
 
 - **The Main Program:** This is where we run the main parts. There is an example solver implemented, Solver, which you can try out of the box.
